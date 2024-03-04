@@ -1,0 +1,29 @@
+.pageFooter {
+	margin-top: 20px;
+	padding: 32px 60px;
+
+	@media(max-width: 500px){
+		padding: 32px 20px;
+	}
+
+	&Upper {
+		display: flex;
+		justify-content: space-between;
+		column-gap: 35px;
+
+		&Item {
+			flex: 1;
+			&Title {
+				font-weight: 600;
+				margin-bottom: 10px;
+				padding-bottom: 10px;
+				width: 100%;
+				border-bottom: 1px solid var(--border-color-light);
+			}
+
+			&Link {
+				display: block;
+			}
+		}
+	}
+}

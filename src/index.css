@@ -1,0 +1,59 @@
+:root {
+  --content-width: 1200px;
+  --border-color-regular: rgb(196, 198, 200);
+  --border-color-light: rgb(230, 231, 234);
+  --border-radius-default: 6px;
+  --color-blue: #3d6991;
+  --color-red: #cc4639;
+  --color-yellow-primary: #ffc413;
+  --color-yellow-secondary: #f9e95a;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+select {
+  padding: 8px 35px 8px 12px;
+  background-image: url("data:image/svg+xml,%3Csvg width='7' height='6' viewBox='0 0 7 6' xmlns='http://www.w3.org/2000/svg' %3E%3Cpolygon transform='matrix(1 0 0 -1 -1125 2180)' points='1128.3074 2174 1131.3074 2180 1125.3074 2180' fill='%2306062D' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px top 50%;
+  background-size: 7px;
+  line-height: 28px;
+  font-size: 15px;
+  border: 1px solid var(--border-color-regular);
+  border-radius: var(--border-radius-default);
+  letter-spacing: normal;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}

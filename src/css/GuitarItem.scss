@@ -1,0 +1,95 @@
+.guitarItem {
+  display: block;
+  border: 1px solid var(--border-color-light);
+  cursor: pointer;
+  border-radius: var(--border-radius-default);
+  overflow: hidden;
+
+  &:hover {
+    border-color: var(--color-red);
+  }
+
+  &Upper {
+    position: relative;
+    line-height: 1;
+
+    & &Button {
+      border: 1px solid var(--color-red);
+      text-align: center;
+      cursor: pointer;
+      opacity: 0;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      padding: 8px 6px;
+      width: 80%;
+      border-radius: var(--border-radius-default);
+      transition: all linear 0.1s;
+    }
+
+    &Image {
+      &::after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+        line-height: 1;
+      }
+      height: 100%;
+      aspect-ratio: 1 / 1;
+
+      img {
+        position: absolute;
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &:hover &UpperButton {
+    opacity: 100%;
+    bottom: 20px;
+  }
+
+  &Lower {
+    padding: 12px;
+
+    &Title {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    &Bottom {
+      padding-top: 15px;
+      margin-top: auto;
+    }
+
+    &Price {
+      &Label {
+        color: rgb(151, 151, 151);
+        font-size: 12px;
+      }
+
+      &Value {
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1.8;
+        margin-bottom: 5px;
+      }
+    }
+
+    &Brand {
+      background-color: var(--color-red);
+      border-radius: 18px;
+      font-size: 13px;
+      padding: 5px 8px;
+      line-height: 1.2;
+      font-weight: 700;
+      width: fit-content;
+      color: white;
+    }
+  }
+}

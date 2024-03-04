@@ -1,0 +1,154 @@
+.GuitarPage {
+  display: flex;
+  column-gap: 40px;
+  margin-top: 40px;
+
+  @media (max-width: 500px) {
+    display: block;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  &Left {
+    flex: 2 0 50%;
+    min-width: 0;
+
+    @media (max-width: 500px) {
+      margin-bottom: 20px;
+    }
+
+    &Carousel {
+      min-width: 0;
+
+      &Img {
+        cursor: pointer;
+        border-radius: var(--border-radius-default);
+        overflow: hidden;
+
+        @media (max-width: 500px) {
+          min-width: calc(100% - 40px);
+        }
+
+        &.fetching {
+          aspect-ratio: 1 / 1;
+          height: 100%;
+        }
+      }
+    }
+
+    &Info {
+      border: 1px solid var(--border-color-regular);
+      border-radius: var(--border-radius-default);
+      overflow: hidden;
+
+      &Header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 20px;
+
+        &Container {
+          padding: 20px;
+          border-bottom: 1px solid var(--border-color-regular);
+          width: 100%;
+
+          @media (max-width: 500px) {
+            width: calc(100% - 40px);
+          }
+        }
+
+        &Tab {
+          padding: 10px 20px;
+          cursor: pointer;
+
+          &.active {
+            border: 1px solid var(--color-red);
+            border-radius: var(--border-radius-default);
+            background-color: rgb(251, 240, 240);
+          }
+        }
+      }
+
+      &Content {
+        padding: 25px 20px;
+        background-color: rgb(245, 245, 245);
+        color: rgb(80, 80, 80);
+      }
+    }
+  }
+
+  &Right {
+    border-radius: var(--border-radius-default);
+    overflow: hidden;
+    border: 1px solid var(--border-color-regular);
+    height: fit-content;
+
+    @media (min-width: 501px) {
+      min-width: 400px;
+      position: sticky;
+      top: 220px;
+      flex: 1 0 28%;
+    }
+
+    @media (max-width: 500px) {
+      min-width: unset;
+      width: 100%;
+    }
+
+    & > div {
+      padding: 15px 17px;
+      box-sizing: border-box;
+    }
+
+    &Info {
+      border-bottom: 1px solid var(--border-color-regular);
+
+      &Title {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      &Price {
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+
+    &Checkout {
+      border-bottom: 1px solid var(--border-color-regular);
+
+      &Button {
+        width: 100%;
+      }
+    }
+
+    &Perks {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      &Inner {
+        display: flex;
+        flex-direction: column;
+        column-gap: 10px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.guitarDetails {
+  &List {
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
