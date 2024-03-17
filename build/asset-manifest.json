@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/erekeevB/batyrber-zardbek-guitar/static/css/main.b2085923.css",
+    "main.js": "/erekeevB/batyrber-zardbek-guitar/static/js/main.a17994a2.js",
+    "static/js/787.f5573ca4.chunk.js": "/erekeevB/batyrber-zardbek-guitar/static/js/787.f5573ca4.chunk.js",
+    "static/media/main_logo.png": "/erekeevB/batyrber-zardbek-guitar/static/media/main_logo.cb0ba612cc1a83b58d7e.png",
+    "static/media/main_logo_mobile.png": "/erekeevB/batyrber-zardbek-guitar/static/media/main_logo_mobile.4190e9dee69014db4159.png",
+    "index.html": "/erekeevB/batyrber-zardbek-guitar/index.html",
+    "main.b2085923.css.map": "/erekeevB/batyrber-zardbek-guitar/static/css/main.b2085923.css.map",
+    "main.a17994a2.js.map": "/erekeevB/batyrber-zardbek-guitar/static/js/main.a17994a2.js.map",
+    "787.f5573ca4.chunk.js.map": "/erekeevB/batyrber-zardbek-guitar/static/js/787.f5573ca4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b2085923.css",
+    "static/js/main.a17994a2.js"
+  ]
+}
