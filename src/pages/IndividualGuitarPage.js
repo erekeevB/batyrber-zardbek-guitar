@@ -7,6 +7,7 @@ import { fetchIndividualGuitar } from "../axiosAPI";
 import { useParams } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import { toast } from "react-toastify";
+import GuitarPlaceholder from "../guitar_placeholder.jpeg";
 
 function IndividualGuitarPage() {
   const { id } = useParams();
@@ -50,17 +51,23 @@ function IndividualGuitarPage() {
         >
           {isFetching ? (
             <Skeleton className={"GuitarPageLeftCarouselImg fetching"} />
+          ) : mediaUrl.length > 0 ? (
+            mediaUrl.map((pageUrl, i) => (
+              <img
+                key={i}
+                src={pageUrl}
+                alt={"guitar"}
+                className="GuitarPageLeftCarouselImg"
+              />
+            ))
           ) : (
-            Array(10)
-              .fill(null)
-              .map((_, i) => (
-                <img
-                  key={i}
-                  src={mediaUrl}
-                  alt={"guitar"}
-                  className="GuitarPageLeftCarouselImg"
-                />
-              ))
+            [
+              <img
+                src={GuitarPlaceholder}
+                alt={"guitar"}
+                className="GuitarPageLeftCarouselImg"
+              />,
+            ]
           )}
         </Carousel>
         <div className={"GuitarPageLeftInfo"}>

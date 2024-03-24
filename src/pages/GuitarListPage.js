@@ -57,7 +57,7 @@ export default function GuitarListPage() {
             ? Array(4)
                 .fill(null)
                 .map(() => <GuitarItem isFetching />)
-            : data.data.map((el) => (
+            : data.data.guitarDTOList.map((el) => (
                 <GuitarItem
                   id={el.id}
                   photoUrl={el.mediaUrl}
@@ -67,19 +67,21 @@ export default function GuitarListPage() {
                 />
               ))}
         </div>
-        <ReactPaginate
-          breakLabel="..."
-          previousLabel={<FaChevronLeft />}
-          nextLabel={<FaChevronRight />}
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
-          pageCount={1}
-          containerClassName={"paginationContainer"}
-          pageClassName={"paginationItem"}
-          previousClassName={"paginationItem"}
-          nextClassName={"paginationItem"}
-          activeLinkClassName={"active"}
-        />
+        {!isFetching && (
+          <ReactPaginate
+            breakLabel="..."
+            previousLabel={<FaChevronLeft />}
+            nextLabel={<FaChevronRight />}
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={5}
+            pageCount={data.data.pageCount}
+            containerClassName={"paginationContainer"}
+            pageClassName={"paginationItem"}
+            previousClassName={"paginationItem"}
+            nextClassName={"paginationItem"}
+            activeLinkClassName={"active"}
+          />
+        )}
       </div>
     </div>
   );
